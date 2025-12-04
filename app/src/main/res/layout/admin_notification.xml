@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingHorizontal="12dp"
+    android:background="@color/backgroundColor">
+
+        <TextView
+            android:id="@+id/eventTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="EventTitle"
+            android:textSize="20sp"
+            android:textColor="@color/textPrimary"
+            android:maxLines="1"
+            android:ellipsize="end" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingVertical="2dp"
+        android:paddingHorizontal="2dp"
+        android:layout_marginVertical="2dp"
+        android:background="@color/backgroundBox"
+        android:isScrollContainer="true">
+
+        <!-- Host name or Profile name -->
+
+        <TextView
+            android:id="@+id/notificationLog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="4dp"
+            android:text="NotificationLog"
+            android:textSize="16sp"
+            android:textColor="@color/textPrimary" />
+    </LinearLayout>
+
+</LinearLayout>

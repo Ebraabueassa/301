@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/notificationTargetMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Who do you want to send notifications to?"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_marginBottom="24dp"
+        android:textColor="@color/textPrimary"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/waitlistNotificationButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send to Waiting List Entrants"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/button_color"
+        android:textColor="@color/button_text_color"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/invitedNotificationButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send to Invited Entrants"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/button_color"
+        android:textColor="@color/button_text_color"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/cancelledNotificationButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send to Cancelled Entrants"
+        android:background="@drawable/button_color"
+        android:textColor="@color/button_text_color"/>
+
+</LinearLayout>

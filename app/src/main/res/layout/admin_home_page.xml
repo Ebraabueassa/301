@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/backgroundColor">
+
+    <!-- Header section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/headerTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:maxHeight="50dp"
+            android:src="@drawable/community_logo_name"
+            android:contentDescription="@string/community"/>
+    </LinearLayout>
+
+    <!-- Divider line -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#BDBDBD" />
+
+    <!-- Content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center">
+
+        <!-- Helper text -->
+        <TextView
+            android:id="@+id/subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select category to browse"
+            android:textColor="@color/textPrimary"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:paddingBottom="32dp" />
+
+        <!-- Event buttons -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonEvent"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:text="Event"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/button_color"
+            android:textColor="@color/white"/>
+
+        <!-- Host buttons -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonHost"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:text="Organizer"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/button_color"
+            android:textColor="@color/white"/>
+
+        <!-- Profile buttons -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonProfile"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:text="Entrant"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/button_color"
+            android:textColor="@color/white"/>
+
+        <!-- Image buttons -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonImage"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:text="Image"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:background="@drawable/button_color"
+            android:textColor="@color/white"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonNotification"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/button_color"
+            android:text="Notification Log"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:layout_marginVertical="15dp"
+            android:textSize="18sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Back"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:background="@drawable/button_color"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+</LinearLayout>

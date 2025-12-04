@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/backgroundColor">
+
+    <!-- Header title -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/headerTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:maxHeight="50dp"
+            android:src="@drawable/community_logo_name"
+            android:contentDescription="@string/community"/>
+    </LinearLayout>
+
+    <!-- Header divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#BDBDBD" />
+
+    <!-- Toolbar row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="8dp"
+        android:gravity="center_vertical">
+
+        <!-- notification and camera button -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/organizerNotifications"
+                android:layout_width="48sp"
+                android:layout_height="48sp"
+                android:background="@drawable/baseline_notifications_none_24"
+                android:clickable="true"
+                android:contentDescription="@string/notification"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:padding="6dp" />
+
+            <ImageButton
+                android:id="@+id/buttonCamera"
+                android:layout_width="48sp"
+                android:layout_height="48sp"
+                android:layout_marginEnd="200dp"
+                android:background="@drawable/camera_icon"
+                android:clickable="true"
+                android:contentDescription="@string/scan_qr_code"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:padding="6dp"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <!-- Guide and Filter button -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonGuide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Guide"
+                android:textAllCaps="false"
+                android:background="@drawable/button_color"
+                android:textColor="@color/button_text_color"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonFilter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Filter"
+                android:textAllCaps="false"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/button_color"
+                android:textColor="@color/button_text_color"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Event list -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/HostEventView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingHorizontal="12dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp" />
+
+    <!-- Create+ and Notify buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingVertical="10dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonCreate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create+"
+            android:textAllCaps="false"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/button_color"
+            android:textColor="@color/button_text_color" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonNotify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notify"
+            android:textAllCaps="false"
+            android:background="@drawable/button_color"
+            android:textColor="@color/button_text_color" />
+    </LinearLayout>
+
+
+    <!-- Footer divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#BDBDBD" />
+
+    <!-- Footer buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingHorizontal="16dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonGeolocation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Geolocation"
+            android:textAllCaps="false"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/button_color"
+            android:textColor="@color/button_text_color"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonMyProfile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="My Profile"
+            android:textAllCaps="false"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/button_color"
+            android:textColor="@color/button_text_color"/>
+
+    </LinearLayout>
+
+</LinearLayout>

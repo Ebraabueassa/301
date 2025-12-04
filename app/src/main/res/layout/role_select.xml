@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/backgroundColor">
+
+    <!-- Header section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/headerTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:maxHeight="50dp"
+            android:src="@drawable/community_logo_name"
+            android:contentDescription="@string/community"/>
+    </LinearLayout>
+
+    <!-- Divider line -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#BDBDBD" />
+
+    <!-- Main content area -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- User Button -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonUser"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="User"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:layout_margin="12dp"
+            android:background="@drawable/button_color"
+            android:textColor="@color/button_text_color"/>
+
+        <!-- Host Button -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonHost"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Host"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:layout_margin="12dp"
+            android:background="@drawable/button_color"
+            android:textColor="@color/button_text_color"/>
+
+        <!-- Admin Button -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonAdmin"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Admin"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:layout_margin="12dp"
+            android:background="@drawable/button_color"
+            android:textColor="@color/button_text_color"/>
+
+    </LinearLayout>
+
+</LinearLayout>

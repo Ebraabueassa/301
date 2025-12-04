@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="24dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/headerTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Poster Upload"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/headerPrimary" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#BDBDBD" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/previewTextLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Preview:"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone"/>
+
+            <!-- Poster preview -->
+            <ImageView
+                android:id="@+id/imagePosterPreview"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:contentDescription="Poster preview"
+                android:background="#EEEEEE"
+                android:layout_marginBottom="16dp"
+                android:visibility="gone"/>
+
+            <!-- Upload button -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonUploadPoster"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Select Image From Gallery "
+                android:textAllCaps="false"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/button_color"
+                android:textColor="@color/button_text_color"/>
+
+            <ProgressBar
+                android:id="@+id/uploadProgressBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:orientation="horizontal"
+                android:layout_marginBottom="24dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/cancelButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cancel"
+                    android:textAllCaps="false"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/button_color"
+                    android:textColor="@color/button_text_color"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonSubmitPoster"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Upload"
+                    android:textAllCaps="false"
+                    android:enabled="false"
+                    android:background="@drawable/button_color"
+                    android:textColor="@color/button_text_color"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

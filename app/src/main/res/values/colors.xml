@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="warning">@android:color/holo_red_dark</color>
+    <color name="Primary">#0080ff</color>
+    <color name="PrimaryDark">#000912</color>
+    <color name="PrimaryLight">#C8E4FF</color>
+    <color name="Secondary">#2A00FF</color>
+    <color name="Tertiary">#8000ff</color>
+    <color name="Complementary">#ffff00</color>
+    <color name="Triadic">#FF00CC</color>
+
+    <!-- Background colors -->
+    <color name="backgroundColor">@color/white</color>
+    <color name="backgroundBox">#F0F0F0</color>
+
+    <!-- Text colors -->
+    <color name="headerPrimary">@color/Primary</color>
+    <color name="textPrimary">@color/black</color>
+
+    <!-- Button colors -->
+    <color name="fill">@color/Primary</color>
+    <color name="button_text_color">@color/white</color>
+
+    <!-- For gradient look    -->
+    <color name="StrokeColor_button">@color/Triadic</color>
+    <color name="StartColor_button">@color/Secondary</color>
+    <color name="EndColor_button">@color/Primary</color>
+
+    <!-- Box_selector colors -->
+    <color name="StrokeColor">@color/Triadic</color>
+    <color name="StartColor">@color/Secondary</color>
+    <color name="EndColor">@color/Primary</color>
+    <color name="on_click_color">@color/Complementary</color>
+
+    <color name="button_color">#EDEBEBED</color>
+
+    <color name="zxing_custom_possible_result_points">#c0ffbd</color>
+    <color name="zxing_custom_result_view">#b0000000</color>
+    <color name="zxing_custom_viewfinder_laser">#ffcc0000</color>
+    <color name="zxing_custom_viewfinder_mask">#60000000</color>
+</resources>

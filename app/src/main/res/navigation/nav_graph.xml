@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/SplashPageFragment">
+
+    <fragment
+        android:id="@+id/SplashPageFragment"
+        android:name="com.example.community.Screens.SplashPageFragment"
+        android:label="Start Page"
+        tools:layout="@layout/start_page"
+        >
+        <action
+            android:id="@+id/action_SplashPageFragment_to_RoleSelectFragment"
+            app:destination="@id/RoleSelectFragment">
+
+
+        </action>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/RoleSelectFragment"
+        android:name="com.example.community.Screens.RoleSelectFragment"
+        android:label="Role Select"
+        tools:layout="@layout/role_select"
+        >
+
+        <action
+            android:id="@+id/action_RoleSelectFragment_to_EntrantHomeFragment"
+            app:destination="@id/EntrantHomeFragment"
+            >
+        </action>
+
+        <action
+            android:id="@+id/action_RoleSelectFragment_to_OrganizerHomeFragment"
+            app:destination="@id/OrganizerHomeFragment"
+            >
+        </action>
+
+        <action
+            android:id="@+id/action_RoleSelectFragment_to_AdminHomeFragment"
+            app:destination="@id/AdminHomeFragment"
+            >
+        </action>
+    </fragment>
+    <fragment
+
+        android:id="@+id/QRScannerFragment"
+        android:name="com.example.community.Screens.QRScannerFragment"
+        android:label="Scan QR Code" >
+
+        <action
+            android:id="@+id/action_QRScannerFragment_to_EventDescriptionFragment"
+            app:destination="@id/EventDescriptionFragment"
+            app:popUpTo="@id/EntrantHomeFragment" />
+    </fragment>
+
+    <!-- Entrant Fragments -->
+    <fragment
+        android:id = "@+id/EntrantHomeFragment"
+        android:name = "com.example.community.Screens.EntrantHomeFragment"
+        android:label = "Entrant Home"
+        tools:layout = "@layout/user_events"
+        >
+        <action
+            android:id="@+id/action_EntrantHomeFragment_to_NotificationsFragment"
+            app:destination="@id/EntrantNotificationsFragment"
+            >
+
+        </action>
+
+        <!--        <action-->
+        <!--            android:id="@+id/action_EntrantHomeFragment_to_EntrantHistoryFragment"-->
+        <!--            app:destination="@id/EntrantHistoryFragment"-->
+        <!--            >-->
+        <!--        </action>-->
+
+        <action
+            android:id="@+id/action_EntrantHomeFragment_to_EntrantUserProfileFragment"
+            app:destination="@id/EntrantUserProfileFragment"
+            >
+        </action>
+        <action
+            android:id="@+id/action_EntrantHomeFragment_to_UserFilterFragment"
+            app:destination="@id/FilterFragment" />
+
+        <action
+            android:id="@+id/action_EntrantHomeFragment_to_EventDescriptionFragment"
+            app:destination="@id/EventDescriptionFragment"
+            >
+        </action>
+
+        <action
+            android:id="@+id/action_EntrantHomeFragment_to_UserGuideFragment"
+            app:destination="@id/UserGuideFragment" />
+
+        <!--        Implement QR action-->
+        <!--        Implement Filters action-->
+<!--        Implement QR action-->
+        <action
+            android:id="@+id/action_EntrantHomeFragment_to_QRScannerFragment"
+            app:destination="@id/QRScannerFragment" />
+<!--        Implement Filters action-->
+    </fragment>
+
+    <fragment
+        android:id="@+id/EventDescriptionFragment"
+        android:name="com.example.community.Screens.EntrantEventDescriptionFragment"
+        android:label="Event Description"
+        tools:layout="@layout/entrant_event_description"
+        >
+        <argument
+            android:name="event_id"
+            app:argType="string"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/EntrantNotificationsFragment"
+        android:name="com.example.community.Screens.NotificationsFragment"
+        android:label="Notifications"
+        tools:layout="@layout/notification_page"
+        >
+        <action
+            android:id="@+id/action_EntrantNotificationsFragment_to_NotificationSettingsFragment"
+            app:destination="@id/NotificationSettingsFragment" />
+        <action
+            android:id="@+id/action_NotificationsFragment_to_EventDetailsFragment"
+            app:destination="@id/EventDescriptionFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/EntrantUserProfileFragment"
+        android:name="com.example.community.Screens.EntrantUserProfileFragment"
+        android:label="Entrant User Profile"
+        tools:layout="@layout/entrant_profile"
+        >
+        <action
+            android:id="@+id/action_EntrantUserProfileFragment_to_SplashPageFragment"
+            app:destination="@id/SplashPageFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true"
+            >
+        </action>
+    </fragment>
+
+    <dialog
+        android:id="@+id/DeleteAccountFragment"
+        android:name="com.example.community.Screens.DeleteAccountFragment"
+        android:label="Delete Account"
+        tools:layout="@layout/delete_unity"
+        >
+        <argument
+            android:name="userId"
+            app:argType="string"
+            />
+    </dialog>
+
+    <fragment
+        android:id="@+id/UserGuideFragment"
+        android:name="com.example.community.Screens.UserGuideFragment"
+        android:label="User Guide"
+        tools:layout="@layout/user_guide_page">
+    </fragment>
+
+    <!--    Organizer Fragments-->
+    <fragment
+        android:id = "@+id/OrganizerHomeFragment"
+        android:name = "com.example.community.Screens.OrganizerScreens.OrganizerHomeFragment"
+        android:label = "Organizer Home"
+        tools:layout = "@layout/organizer_main_page"
+        >
+        <action
+            android:id="@+id/action_OrganizerHomeFragment_to_HostNotifyFragment"
+            app:destination="@id/OrganizerNotifyFragment" >
+        </action>
+        <action
+            android:id="@+id/action_OrganizerHomeFragment_to_NotificationsFragment"
+            app:destination="@id/EntrantNotificationsFragment">
+        </action>
+        <action
+            android:id="@+id/action_OrganizerHomeFragment_to_OrganizerProfileFragment"
+            app:destination="@id/EntrantUserProfileFragment">
+        </action>
+        <action
+            android:id="@+id/action_OrganizerHomeFragment_to_CreateEventFragment"
+            app:destination="@id/CreateEventFragment">
+        </action>
+        <action
+            android:id="@+id/action_OrganizerHomeFragment_to_OrganizerEventDescriptionFragment"
+            app:destination="@id/OrganizerEventDescriptionFragment">
+        </action>
+        <action
+            android:id="@+id/action_OrganizerHomeFragment_to_GeolocationFragment"
+            app:destination="@id/GeolocationFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/CreateEventFragment"
+        android:name="com.example.community.Screens.OrganizerScreens.OrganizerCreateEventFragment"
+        android:label="Create Event"
+        tools:layout="@layout/organizer_create_event_page"
+        >
+        <action
+            android:id="@+id/action_HostCreateEventFragment_to_HostPosterUploadFragment"
+            app:destination="@id/HostPosterUploadFragment" />
+    </fragment>
+
+<!--    Event Description Related Fragments-->
+    <fragment
+        android:id="@+id/GeolocationFragment"
+        android:name="com.example.community.Screens.OrganizerScreens.OrganizerGeolocationFragment"
+        android:label="Geolocation Management"
+        tools:layout="@layout/organizer_geolocation_page">
+        <action
+            android:id="@+id/action_GeolocationFragment_to_GeolocationMapFragment"
+            app:destination="@id/GeolocationMapFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/GeolocationMapFragment"
+        android:name="com.example.community.Screens.OrganizerScreens.OrganizerGeolocationMapFragment"
+        android:label="Event Locations"
+        tools:layout="@layout/organizer_geolocation_map_page">
+        <argument
+            android:name="event_id"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/OrganizerEventDescriptionFragment"
+        android:name="com.example.community.Screens.OrganizerScreens.OrganizerEventDescriptionFragment"
+        android:label="Organizer Event Description"
+        tools:layout="@layout/organizer_event_description_page"
+        >
+        <argument
+            android:name="event_id"
+            app:argType="string"
+            />
+
+        <action
+            android:id="@+id/action_OrganizerEventDescriptionFragment_to_CreateEventFragment"
+            app:destination="@id/CreateEventFragment" />
+
+        <action
+            android:id="@+id/action_OrganizerEventDescriptionFragment_to_OrganizerPosterUploadFragment"
+            app:destination="@id/OrganizerPosterUploadFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/OrganizerPosterUploadFragment"
+        android:name="com.example.community.Screens.OrganizerScreens.OrganizerPosterUploadFragment"
+        android:label="Upload Event Poster"
+        tools:layout="@layout/organizer_poster_upload_page">
+        <argument
+            android:name="event_id"
+            app:argType="string" />
+    </fragment>
+
+<!--    Organizer Send Notification related-->
+    <!--    Host Notify Fragments -->
+    <fragment
+        android:id="@+id/OrganizerNotifyFragment"
+        android:name="com.example.community.Screens.OrganizerScreens.OrganizerNotifyFragment"
+        android:label="OrganizerNotifyFragment"
+        tools:layout="@layout/organizer_create_notification_page">
+
+        <action
+            android:id="@+id/action_OrganizerNotifyFragment_to_OrganizerCreateNotificationFragment"
+            app:destination="@id/OrganizerCreateNotificationFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/OrganizerCreateNotificationFragment"
+        android:name="com.example.community.Screens.OrganizerScreens.OrganizerCreateNotificationFragment"
+        android:label="OrganizerCreateNotificationFragment"
+        tools:layout="@layout/organizer_create_notification_page">
+
+        <action
+            android:id="@+id/action_NotificationTargetDialogFragment_to_OrganizerCreateNotificationFragment"
+            app:destination="@id/OrganizerCreateNotificationFragment" />
+
+    </fragment>
+
+
+    <!--    Admin Fragments -->
+    <fragment
+        android:id = "@+id/AdminHomeFragment"
+        android:name = "com.example.community.Screens.AdminHomeFragment"
+        android:label = "Admin Home"
+        tools:layout = "@layout/admin_home_page"
+        >
+        <action
+            android:id="@+id/action_AdminHomeFragment_to_AdminEventFragment"
+            app:destination="@+id/AdminEventFragment">
+        </action>
+
+        <action
+            android:id="@+id/action_AdminHomeFragment_to_AdminHostFragment"
+            app:destination="@+id/AdminHostFragment">
+        </action>
+
+        <action
+            android:id="@+id/action_AdminHomeFragment_to_AdminProfileFragment"
+            app:destination="@+id/AdminProfileFragment">
+        </action>
+
+        <action
+            android:id="@+id/action_AdminHomeFragment_to_AdminImageFragment"
+            app:destination="@+id/AdminImageFragment">
+        </action>
+
+        <action
+            android:id="@+id/action_AdminHomeFragment_to_AdminNotificationFragment"
+            app:destination="@+id/AdminNotificationFragment">
+        </action>
+
+        <action
+            android:id="@+id/action_AdminHomeFragment_to_RoleSelectFragment"
+            app:destination="@+id/RoleSelectFragment">
+        </action>
+
+    </fragment>
+
+    <!--    Admin Event Fragments -->
+
+    <fragment
+        android:id="@+id/AdminEventFragment"
+        android:name="com.example.community.Screens.AdminEventFragment"
+        android:label="Admin Events"
+        tools:layout="@layout/admin_event">
+
+        <action
+            android:id="@+id/action_AdminEventFragment_to_AdminHomeFragment"
+            app:destination="@id/AdminHomeFragment">
+        </action>
+
+
+
+
+    </fragment>
+    <!--    Admin Host Fragments -->
+    <fragment
+        android:id="@+id/AdminHostFragment"
+        android:name="com.example.community.Screens.AdminHostFragment"
+        android:label="Admin Hosts"
+        tools:layout="@layout/admin_host_profile">
+
+        <action
+            android:id="@+id/action_AdminHostFragment_to_EntrantUserProfileFragment"
+            app:destination="@id/EntrantUserProfileFragment" />
+
+
+        <action
+            android:id="@+id/action_AdminHostFragment_to_AdminHomeFragment"
+            app:destination="@id/AdminHomeFragment">
+        </action>
+
+    </fragment>
+
+    <!--    Admin Profile Fragments -->
+    <fragment
+        android:id="@+id/AdminProfileFragment"
+        android:name="com.example.community.Screens.AdminProfileFragment"
+        android:label="Admin Users"
+        tools:layout="@layout/admin_profile_page">
+
+        <action
+            android:id="@+id/action_AdminProfileFragment_to_EntrantUserProfileFragment"
+            app:destination="@id/EntrantUserProfileFragment" />
+
+
+        <action
+            android:id="@+id/action_AdminProfileFragment_to_AdminHomeFragment"
+            app:destination="@id/AdminHomeFragment">
+        </action>
+
+
+    </fragment>
+    <!--    Admin image Fragments -->
+    <fragment
+        android:id="@+id/AdminImageFragment"
+        android:name="com.example.community.Screens.AdminImageFragment"
+        android:label="Admin Hosts"
+        tools:layout="@layout/admin_image">
+
+    </fragment>
+
+    <!--    Admin Notification Fragments -->
+    <fragment
+        android:id="@+id/AdminNotificationFragment"
+        android:name="com.example.community.Screens.AdminNotificationFragment"
+        android:label="Admin Users"
+        tools:layout="@layout/admin_notification_page">
+
+        <action
+            android:id="@+id/action_AdminNotificationFragment_to_AdminHomeFragment"
+            app:destination="@id/AdminHomeFragment">
+        </action>
+    </fragment>
+
+
+    <!--    Host Poster Upload Fragments -->
+    <fragment
+        android:id="@+id/HostPosterUploadFragment"
+        android:name="com.example.community.Screens.OrganizerScreens.OrganizerPosterUploadFragment"
+        android:label="HostPosterUploadFragment"
+        tools:layout="@layout/organizer_poster_upload_page">
+
+        <action
+            android:id="@+id/action_HostPosterUploadFragment_to_OrganizerHomeFragment"
+            app:destination="@id/OrganizerHomeFragment" />
+    </fragment>
+    <!--    User Event history Fragments -->
+    <fragment
+        android:id="@+id/UserEventHistoryFragment"
+        android:name="com.example.community.Screens.UserEventHistoryFragment"
+        android:label="Event History"
+        tools:layout="@layout/user_event_page" />
+    <!--    Notification Setting Fragments -->
+    <fragment
+        android:id="@+id/NotificationSettingsFragment"
+        android:name="com.example.community.Screens.NotificationSettingsFragment"
+        android:label="Notification Settings"
+        tools:layout="@layout/notification_settings" />
+    <!--    Filter Fragments -->
+    <fragment
+        android:id="@+id/FilterFragment"
+        android:name="com.example.community.Screens.FilterFragment"
+        android:label="Filter Events"
+        tools:layout="@layout/filter_page" />
+
+
+
+</navigation>

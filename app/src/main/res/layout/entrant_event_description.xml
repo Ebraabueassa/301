@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/eventTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Event Title"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/headerPrimary"
+            android:textAlignment="center"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/eventDetailsHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Event Details"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="@color/headerPrimary"
+            android:layout_marginBottom="16dp"/>
+        <TextView
+            android:id="@+id/eventDescription"
+            android:text="Event Description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textColor="@color/textPrimary"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/eventLocation"
+            android:text="Event Location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textColor="@color/textPrimary"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/eventDates"
+            android:text="Event Dates"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:textColor="@color/textPrimary"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/registrationDates"
+            android:textAlignment="center"
+            android:text="Registration Dates"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/textPrimary"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/capacity"
+            android:text="Capacity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:textColor="@color/textPrimary"
+            android:layout_marginBottom="24dp"/>
+
+        <TextView
+            android:id="@+id/waitlistCount"
+            android:text="Waitlist Count"
+            android:textAlignment="center"
+            android:textColor="@color/textPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:layout_marginBottom="16dp"
+            >
+            <TextView
+                android:id="@+id/organizerDetailsHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Event Organizer Details"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="@color/headerPrimary"
+                android:layout_marginBottom="16dp"/>
+            <TextView
+                android:id="@+id/eventOrganizerName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Event Organizer Username"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:textColor="@color/textPrimary"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/eventOrganizerEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Event Organizer Email"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:textColor="@color/textPrimary"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/eventOrganizerPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Event Organizer Phone"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:textColor="@color/textPrimary"
+                android:layout_marginBottom="8dp" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/waitlistButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Waitlist"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/button_color"
+            android:textColor="@color/button_text_color"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/backButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:background="@drawable/button_color"
+            android:textColor="@color/button_text_color"/>
+
+        <ProgressBar
+            android:id="@+id/loadingScreen"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            style="?android:attr/progressBarStyle" />
+
+    </LinearLayout>
+</ScrollView>

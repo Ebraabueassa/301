@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/backgroundColor">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="24dp"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/headerTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:maxHeight="50dp"
+                android:src="@drawable/community_logo_name"
+                android:contentDescription="@string/community"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#BDBDBD"
+                android:layout_marginBottom="24dp" />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+
+            <!-- Event Name -->
+            <TextView
+                android:id="@+id/labelEventName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Event Name"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="6dp"
+                android:textColor="@color/headerPrimary"/>
+
+            <EditText
+                android:id="@+id/inputEventName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter event name"
+                android:background="@android:drawable/edit_text"
+                android:backgroundTint="@color/backgroundBox"
+                android:padding="10dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Event Description -->
+            <TextView
+                android:id="@+id/labelDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Event Description"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="6dp"
+                android:textColor="@color/headerPrimary"/>
+
+            <EditText
+                android:id="@+id/inputDescription"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:hint="Enter event details"
+                android:gravity="top"
+                android:background="@android:drawable/edit_text"
+                android:backgroundTint="@color/backgroundBox"
+                android:padding="10dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Event Location-->
+            <TextView
+                android:id="@+id/labelEventLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Event Location"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="6dp"
+                android:textColor="@color/headerPrimary"/>
+
+            <EditText
+                android:id="@+id/inputEventLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter event location"
+                android:background="@android:drawable/edit_text"
+                android:backgroundTint="@color/backgroundBox"
+                android:padding="10dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Number of Participants -->
+            <TextView
+                android:id="@+id/labelParticipants"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Number of Participants"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="6dp"
+                android:textColor="@color/headerPrimary"/>
+
+            <EditText
+                android:id="@+id/inputMaxParticipants"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter number"
+                android:inputType="number"
+                android:background="@android:drawable/edit_text"
+                android:backgroundTint="@color/backgroundBox"
+                android:padding="10dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Optional Waiting List Size -->
+            <TextView
+                android:id="@+id/labelWaitingListSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Maximum Waiting List Size (Optional)"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="6dp"
+                android:textColor="@color/headerPrimary"/>
+
+            <EditText
+                android:id="@+id/inputWaitingListSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter maximum waiting list size"
+                android:inputType="number"
+                android:background="@android:drawable/edit_text"
+                android:backgroundTint="@color/backgroundBox"
+                android:padding="10dp"
+                android:layout_marginBottom="16dp" />
+            <TextView
+                android:id="@+id/geolocationLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Geolocation"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="6dp"
+                android:textColor="@color/headerPrimary"/>
+
+            <CheckBox
+                android:id="@+id/checkboxGeolocationRequired"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Require Geolocation for Entrants"
+                android:textSize="14sp"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="8dp"
+                android:backgroundTint="@color/backgroundBox"/>
+
+            <!-- Start and End Time -->
+            <TextView
+                android:id="@+id/labelEventDates"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Start and End dates"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="6dp"
+                android:textColor="@color/headerPrimary"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <EditText
+                    android:id="@+id/inputEventStart"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Start"
+                    android:inputType="datetime"
+                    android:background="@android:drawable/edit_text"
+                    android:backgroundTint="@color/backgroundBox"
+                    android:padding="10dp"
+                    android:layout_marginEnd="8dp" />
+
+                <EditText
+                    android:id="@+id/inputEventEnd"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="End"
+                    android:inputType="datetime"
+                    android:background="@android:drawable/edit_text"
+                    android:backgroundTint="@color/backgroundBox"
+                    android:padding="10dp" />
+            </LinearLayout>
+
+    <!--        Registration Period-->
+
+            <TextView
+                android:id="@+id/labelRegistrationDates"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Registration Period"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="6dp"
+                android:textColor="@color/headerPrimary"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="16dp">
+
+                <EditText
+                    android:id="@+id/inputRegistrationStart"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Start Date"
+                    android:focusable="false"
+                    android:background="@android:drawable/edit_text"
+                    android:backgroundTint="@color/backgroundBox"
+                    android:padding="10dp"
+                    android:layout_marginEnd="8dp" />
+
+                <EditText
+                    android:id="@+id/inputRegistrationEnd"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="End Date"
+                    android:focusable="false"
+                    android:background="@android:drawable/edit_text"
+                    android:backgroundTint="@color/backgroundBox"
+                    android:padding="10dp" />
+            </LinearLayout>
+
+            <!-- Spacer -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="24dp" />
+
+            <!-- Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="end">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cancel"
+                    android:textAllCaps="false"
+                    android:background="@drawable/button_color"
+                    android:textColor="@color/button_text_color"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonSubmit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Submit"
+                    android:textAllCaps="false"
+                    android:layout_marginStart="12dp"
+                    android:background="@drawable/button_color"
+                    android:textColor="@color/button_text_color"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>>
+</ScrollView>

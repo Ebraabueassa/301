@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">CommUnity</string>
+    <string name="community">CommUnity</string>
+    <string name="filter">Filter</string>
+    <string name="notification">Notification</string>
+    <string name="scan_qr_code">Scan QR Code</string>
+    <string name="event_history">Event History</string>
+    <string name="my_profile">My Profile</string>
+    <string name="waitlisted_events">Waitlisted Events</string>
+    <string name="joined_events">Joined Events</string>
+    <string name="back">Back</string>
+    <string name="leave_wait_str">Are you sure you want to leave the CommUnity?</string>
+    <string name="cancel">Cancel</string>
+    <string name="leave">Leave</string>
+    <string name="leave_join_str">Warning! You have Joined the Selected Event \n ARE YOU SURE YOU WANT TO LEAVE?</string>
+    <string name="confirm">Confirm</string>
+    <string name="results_noti">Recieve notification for results</string>
+    <string name="phone_text">Phone:</string>
+    <string name="name_string">Name:</string>
+    <string name="email_string">Email:</string>
+</resources>

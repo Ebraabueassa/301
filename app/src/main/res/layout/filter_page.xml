@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="40dp"
+            android:paddingBottom="8dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/headerTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CommUnity"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:textColor="@color/headerPrimary" />
+        </LinearLayout>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#BDBDBD"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Keyword Search -->
+        <TextView
+            android:id="@+id/labelKeyword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Search by Keyword"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/headerPrimary"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/inputKeyword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter event name, location, or description"
+            android:background="@android:drawable/edit_text"
+            android:padding="10dp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Time Available label -->
+        <TextView
+            android:id="@+id/labelTimeAvailable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Time Available"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/headerPrimary"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Time Available input -->
+        <EditText
+            android:id="@+id/inputTimeAvailable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="e.g. 11-29"
+            android:background="@android:drawable/edit_text"
+            android:padding="10dp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Buttons row: Back (left), Apply (right) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Back"
+                android:textAllCaps="false"
+                android:background="@drawable/button_color"
+                android:textColor="@color/button_text_color"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonApplyFilter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Apply"
+                android:textAllCaps="false"
+                android:background="@drawable/button_color"
+                android:textColor="@color/button_text_color"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

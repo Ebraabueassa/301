@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/backgroundColor">
+
+    <TextView
+        android:id="@+id/listTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="List Title"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/userListRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scrollbars="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/listTitle"
+        app:layout_constraintBottom_toTopOf="@id/cancelUsersButton" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/cancelUsersButton"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:text="Cancel Selected Users"
+        android:textSize="12sp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/closeListButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/button_color"
+        android:textColor="@color/button_text_color"
+        android:visibility="gone" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/closeListButton"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:text="Close"
+        android:textSize="13sp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@id/cancelUsersButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/button_color"
+        android:textColor="@color/button_text_color"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

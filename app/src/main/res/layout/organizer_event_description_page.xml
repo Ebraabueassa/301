@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        >
+        <!--    Event Details Section-->
+        <TextView
+            android:id="@+id/eventTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Event Title"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/headerPrimary"
+            android:textAlignment="center"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Poster Image Section -->
+        <ImageView
+            android:id="@+id/posterImageView"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="Event Poster"
+            android:visibility="gone"
+            android:layout_marginBottom="16dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/uploadPosterButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Upload/Update Poster"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/button_color"
+            android:textColor="@color/button_text_color"/>
+
+        <TextView
+            android:id="@+id/eventDetailsHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Event Details"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="@color/headerPrimary"
+            android:layout_marginBottom="16dp"/>
+        <TextView
+            android:id="@+id/eventDescription"
+            android:text="Event Description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textColor="@color/textPrimary"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/eventLocation"
+            android:text="Event Location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textColor="@color/textPrimary"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/eventDates"
+            android:text="Event Dates"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:textColor="@color/textPrimary"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/registrationDates"
+            android:textAlignment="center"
+            android:text="Registration Dates"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/textPrimary"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/capacity"
+            android:text="Capacity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:textColor="@color/textPrimary"
+            android:layout_marginBottom="24dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:layout_marginBottom="16dp"
+            >
+            <TextView
+                android:id="@+id/organizerDetailsHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Event Organizer Details"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="@color/headerPrimary"
+                android:layout_marginBottom="16dp"/>
+            <TextView
+                android:id="@+id/eventOrganizerName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Event Organizer Username"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:textColor="@color/textPrimary"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/eventOrganizerEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Event Organizer Email"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:textColor="@color/textPrimary"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/eventOrganizerPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Event Organizer Phone"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:textColor="@color/textPrimary"
+                android:layout_marginBottom="8dp" />
+
+            </LinearLayout>
+
+    <!--        Counts Section-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:layout_marginBottom="16dp"
+            >
+
+            <TextView
+                android:id="@+id/organizerWaitlistCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Waitlist Count"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:textColor="@color/textPrimary"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/organizerAttendeeCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Attendee Count"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:textColor="@color/textPrimary"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/organizerInvitedCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Invited Count"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:textColor="@color/textPrimary"
+                android:layout_marginBottom="8dp"/>
+        </LinearLayout>
+    <!--        Buttons Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:layout_marginBottom="16dp"
+            >
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/organizerEditEventButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Edit Event"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/button_color"
+                android:textColor="@color/button_text_color"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/viewWaitlistButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="View Waitlist"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/button_color"
+                android:textColor="@color/button_text_color"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/viewInvitedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="View Invited"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:background="@drawable/button_color"
+                android:textColor="@color/button_text_color"
+                android:layout_marginBottom="16dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/viewAttendeesButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="View Attendees"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:background="@drawable/button_color"
+                android:textColor="@color/button_text_color"
+                android:layout_marginBottom="16dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/viewCancelledButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="View Cancelled"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:background="@drawable/button_color"
+                android:textColor="@color/button_text_color"
+                android:layout_marginBottom="16dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/viewDeclinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="View Declined"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:background="@drawable/button_color"
+                android:textColor="@color/button_text_color"
+                android:layout_marginBottom="16dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/runLotteryButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Run Lottery"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:background="@drawable/button_color"
+                android:textColor="@color/button_text_color"
+                android:layout_marginBottom="16dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/exportAttendeesButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Export Attendees CSV"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:background="@drawable/button_color"
+                android:textColor="@color/button_text_color"
+                android:layout_marginBottom="16dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/organizerEventDescriptionBackButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Back"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:background="@drawable/button_color"
+                android:textColor="@color/button_text_color"
+                android:layout_marginBottom="16dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
